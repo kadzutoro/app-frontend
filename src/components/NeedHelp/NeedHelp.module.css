@@ -1,0 +1,89 @@
+.needHelpBlock {
+  position: relative;
+  width: 335px;
+  height: 335px;
+  border-radius: 8px;
+  background-color: var(--modal-background);
+  padding: 24px;
+  margin: 0 14px;
+  border: 1px solid var(--modal-border-color);
+}
+
+.modalTitle {
+  font-size: 18px;
+  color: var(--modal-title-color);
+}
+
+.imputForm {
+  margin-top: 24px;
+}
+
+.inputCardTitle {
+  width: 287px;
+  padding: 14px 0 14px 18px;
+  border-radius: 8px;
+  border: 1px solid var(--btn-background);
+  background-color: transparent;
+  opacity: 0.4;
+  transition: opacity var(--transition);
+  color: var(--modal-title-color);
+}
+
+.inputCardDescription {
+  width: 287px;
+  height: 120px;
+  padding: 14px 0 0 18px;
+  margin-top: 14px;
+  border-radius: 8px;
+  border: 1px solid var(--btn-background);
+  resize: none;
+  background-color: transparent;
+  opacity: 0.4;
+  transition: opacity var(--transition);
+  color: var(--modal-title-color);
+}
+
+.needHelpButton {
+  width: 287px;
+  height: 49px;
+  margin-top: 24px;
+}
+
+.closeModal {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  cursor: pointer;
+}
+
+.closeModal button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .inputCardDescription:hover,
+  .inputCardDescription:focus,
+  .inputCardTitle:hover,
+  .inputCardTitle:focus {
+    opacity: 1;
+    border-color: var(--input-hover-border-color);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .needHelpBlock {
+    width: 400px;
+  }
+  .needHelpButton,
+  .inputCardDescription,
+  .inputCardTitle {
+    width: 352px;
+  }
+
+  .needHelpButton:hover {
+    background-color: var(--btn-hover-background);
+  }
+}

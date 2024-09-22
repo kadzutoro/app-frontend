@@ -1,0 +1,227 @@
+.cardBody {
+  border-radius: 8px;
+  width: 334px;
+  height: 154px;
+  background-color: var(--car-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding: 14px 14px 14px 18px;
+}
+
+.cardBody::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.cardBody.elemLow::before {
+  background-color: var(--label-color-blue);
+}
+
+.cardBody.elemMedium::before {
+  background-color: var(--label-color-red);
+}
+
+.cardBody.elemHigh::before {
+  background-color: var(--label-color-green);
+}
+
+.cardBody.elemWithout::before {
+  background-color: var(--label-color-grey);
+}
+
+.carTitle {
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: var(--modal-title-color);
+  margin-bottom: 8px;
+}
+
+.cardDescription {
+  text-align: left;
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--card-desc-text-color);
+  width: 290px;
+  min-height: 34px;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 14px;
+}
+
+.cardSolid {
+  border: 1px solid var(--border-color);
+  margin-bottom: 14px;
+}
+
+.cardDetals {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.cardInformation {
+  display: flex;
+  gap: 14px;
+}
+
+.priorityTitle {
+  text-align: left;
+  font-size: 8px;
+  letter-spacing: -0.2em;
+  color: var(--label-text-color);
+}
+
+.priorityColor {
+  border-radius: 100%;
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+}
+
+.circleLow {
+  background-color: var(--label-color-bue);
+}
+
+.circleMedium {
+  background-color: var(--label-color-red);
+}
+
+.circleHigh {
+  background-color: var(--label-color-green);
+}
+
+.circleWithout {
+  background-color: var(--label-color-grey);
+}
+
+.priorityTipe {
+  font-size: 10px;
+  letter-spacing: -0.02em;
+  color: var(--modal-title-color);
+}
+
+.priorityTipe:first-letter {
+  text-transform: uppercase;
+}
+
+.deadline {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.deadlineTitle {
+  text-align: left;
+  font-size: 8px;
+  letter-spacing: -0.02em;
+  color: var(--label-text-color);
+}
+
+.deadlineDate {
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: -0.02em;
+  color: var(--modal-title-color);
+}
+
+.cardButtons {
+  display: flex;
+  gap: 8px;
+  stroke: var(--card-btn-color);
+}
+
+.cardButton button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+.bell {
+  stroke: none;
+  cursor: default;
+}
+
+.bell.active {
+  stroke: var(--btn-background);
+}
+
+.bell.passed {
+  stroke: var(--label-color-red);
+}
+
+.button {
+    cursor: pointer;
+    transition: border-color, 250ms ease-in;
+    stroke: var(--card-btn-color);
+}
+
+.button:hover,
+.button:focus {
+  stroke: var(--btn-background);
+}
+
+.buttonPopUp:hover .popUpIcon,
+.buttonPopUp:focus .popUpIcon {
+  stroke: var(--green-btn);
+}
+.buttonPopUp {
+  position: relative;
+}
+
+.popUp {
+    position: fixed;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    z-index: 999;
+    border-radius: 8px;
+    width: 135px;
+    background-color: var(--movecard-modal-background);
+    box-shadow: 0 4px 16px 0 rgba(17, 17, 17, 0.1);
+    z-index: 9;
+    padding: 18px;
+    transition: all 250ms ease;
+}
+
+.popUpList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    margin: 0;
+}
+
+.popUpItem {
+    cursor: pointer;
+    color: var(--movecard-modal-text-color);
+}
+
+.popUpItem:hover .popUpIcon,
+.popUpItem:hover .textPopUp,
+.popUpItem:focus .popUpIcon .popUpItem:focus .textPopUp {
+  stroke: var(--btn-background);
+  color: var(--btn-background);
+}
+
+.popUpBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.popUpIcon {
+    stroke: var(--card-btn-color);
+}

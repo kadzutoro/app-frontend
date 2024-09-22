@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    padding: 24px 88px 24px 10px;
+    justify-content: start;
+    align-items: center;
+    gap: 14px;
+}
+
+.text {
+    font-weight: 500;
+    color: var(--main-text-color);
+    min-width: 52px;
+    align-items: center;
+    transition: color 250ms ease-in;
+}
+
+.button:hover .text,
+.button:focus .text {
+  color: var(--taskboard-hover-accent-text-color);
+}
+
+.icon {
+  stroke: var(--logout-icon-color);
+  transition: border-color, 250ms ease-in;
+}
+.button:hover .icon,
+.button:focus .icon {
+  stroke: var(--logout-icon-hover-color);
+}
+
+.button {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    background-color: inherit;
+    border: none;
+    padding: 0;
+}
+
+.button:hover .text,
+.button:focus .text {
+  color: var(--logout-icon-hover-color);
+}

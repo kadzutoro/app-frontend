@@ -1,0 +1,141 @@
+.dashborad {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  height: 95%;
+  padding: 39px, 20px, 24px;
+}
+
+.columns {
+  display: flex;
+  justify-content: flex-start;
+  gap: 18px;
+  width: 100%;
+  height: 95%;
+  overflow-x: auto;
+  padding-bottom: 24px;
+}
+
+.columns::-webkit-scrollbar {
+  height: 12px;
+}
+
+.columns::-webkit-scrollbar-track {
+  background: var(--scroll-color);
+  border-radius: 10px;
+}
+
+.columns::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-background-color);
+  border-radius: 10px;
+}
+
+.columns::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scroll-background-color-hover);
+}
+
+.addColumnButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 335px;
+  height: 56px;
+  background-color: var(--add-card-btn-background);
+  color: var(--add-card-btn-text-color);
+}
+
+button.addColumnButton > .iconPlus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--add-card-plus-icon-background);
+  stroke: var(--add-card-plus-icon-color);
+  fill: var(--add-card-plus-icon-color);
+}
+
+.svgColumnBtn {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.addColumnButton:hover,
+.addColumnButton:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.textContainer {
+    position: absolute;
+    top: 50%;
+}
+
+.dashborad > .textContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-size: 12px;
+    line-height: 1.33333;
+    text-align: center;
+    color: var(--taskboard-text-color);
+}
+
+@media screen and (min-width: 375px) {
+    .columns {
+        width: 335px;
+    }
+    .addIcon {
+        fill: #fff;
+        stroke: #fff;
+    }
+    .spanCreateBoard {
+        color: var(--taskborad-accent-text-color);
+    }
+    .addColumnButton {
+        min-width: 334px;
+    } 
+    .text {
+        width: 335px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .dashborad {
+        flex-direction: row;
+        justify-content: center;
+        padding: 26px 32px 32px 32px;
+    }
+
+    .columns {
+        width: 704px;
+        padding-bottom: 52px;
+    }
+
+    .text {
+        line-height: 1.2857;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .dashborad {
+        align-items: flex-start;
+        padding: 10px 24px 8px 24px;
+    }
+
+    .columns {
+        width: 1132px;
+        padding-bottom: 16px;
+    }
+    .text {
+        width: 468px;
+    }
+}

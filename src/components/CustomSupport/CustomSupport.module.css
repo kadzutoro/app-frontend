@@ -1,0 +1,55 @@
+.component {
+  width: 197px;
+  height: 238px;
+  border-radius: 8px;
+  padding: 14px;
+  background: var(--support-component-background);
+}
+
+.text {
+  font-size: 12px;
+  line-height: 133%;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+  color: var(--main-text-color);
+}
+
+.brandName {
+  color: var(--brn-background);
+}
+
+.help {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.helpText {
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.02em;
+  color: var(--main-text-color);
+  stroke: var(--white);
+  transition: color 250ms ease-in, stroke 250ms ease-in;
+}
+
+.help:hover .helpText,
+.help:focus .helpText {
+  color: var(--taskboard-hover-accent-text-color);
+  stroke: var(--taskboard-hover-accent-text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .component {
+    width: 212px;
+    height: 272px;
+    padding: 20px;
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 143%;
+  }
+}

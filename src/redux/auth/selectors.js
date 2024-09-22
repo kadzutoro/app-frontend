@@ -1,0 +1,9 @@
+export const selectorUser = state => state.auth.user
+export const selectUserName = state => state.auth.name
+export const selectUserEmail = state => state.auth.email
+export const selectUserGoogleAuth = state => state.auth.user.oauth
+export const selectIsLoggedIn = state => state.auth.isLoading
+export const selectIsRefreshing = state => state.auth.isRefreshing
+export const selectIsLoading = state => state.auth.isLoading
+export const selectUserTheme = state => state.auth.user.theme
+export const selectSessions = state => state.auth.user.sessions
